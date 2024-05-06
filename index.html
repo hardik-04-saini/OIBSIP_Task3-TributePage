@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Tribute Page</title>
+    <style>
+        /* Resetting default styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Setting up font */
+        body {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            background: linear-gradient(45deg, #393e46, #29323c);
+            color: #f2f2f2;
+            line-height: 1.6;
+        }
+
+        /* Main container */
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Title */
+        h1 {
+            font-size: 3em;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #f2f2f2;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Image */
+        .image-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Caption */
+        .caption {
+            font-size: 1.2em;
+            color: #ddd;
+            margin-bottom: 20px;
+            text-align: center;
+            letter-spacing: 1px;
+        }
+
+        /* Tribute data */
+        .tribute-data {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(5px);
+        }
+
+        /* Section title */
+        .section-title {
+            font-size: 2em;
+            color: #f2f2f2;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Content paragraphs */
+        p {
+            font-size: 1.1em;
+            margin-bottom: 15px;
+            line-height: 1.6;
+            color: #ddd;
+            letter-spacing: 0.5px;
+        }
+
+        /* Tribute link */
+        .tribute-link {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            font-size: 1.1em;
+            color: #f0a500;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            letter-spacing: 1px;
+        }
+
+        .tribute-link:hover {
+            color: #f9bc00;
+        }
+
+        /* Attribution */
+        .attribution {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #ccc;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <h1>Bhagat Singh</h1>
+
+        <div class="image-container">
+            <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCBUWFRgVFhUYGBgaGhwYGhgYGhgaGBgaGhoaGRgYGBgcIS4lHB4rIRoYJjgmKy8xNTU1GiQ7QDs0Py40NTEBDAwMBgYGEAYGEDEdFh0xMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMf/AABEIAP4AxgMBIgACEQEDEQH/xAAbAAABBQEBAAAAAAAAAAAAAAACAAEDBAUGB//EADsQAAIBAgQDBQYFBAEEAwAAAAECAAMRBBIhMQVBUQYiYXGBMpGhscHwExRCUtFicuHxBxUWI7JDkqL/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8A9WtEIjGgPFGj3gEIiYNoVoAmPeNGJgImCHEVrxWgP+J5xi56RoJgMah6R1cGVK1axkS4iBpXivK9HEA6E+UsQCBhAwI4MAorRQrQBiCwwsUAIrR2jgQAyx4dooANGjmNeAjEI148AliMYGIwETAETmK8BRQc0cGA8iqnSGzSGq+kDLxjGZq4wgkWmnWceExcQlzeBP8AnSNZu8LxudSD7Q+XWcuadwPrrJsLijTZW9D5cxaB2QMKQUqgYAjYi4koMAxDBkYhQDvGBg3iBgETFmg3jwHDRRERQAvFeR3j3gFeK8EmNeAV45MEGK8AXOojXgOdYs/TUwCJjZoxvFlgJnErYlzlNlv4XA+MsESOpqIHP4nEvYn8InydPqRMLiHEClsyOLjkUb5NedViU30nH8ep33G0AMNxum2hex8QV/8AbSDiuIgaCc1VIB/1Kjva9jb4e+B672S4kHQpfVNv7T/BnRq08U7JcXq06ylUdx7LhQWut9wOVtPdPWk4inNgPM2gaqmETMl+NUV3dYK8coH/AOVPeIGtmivK1HEK2qsGHUEESwDANY4gqdYYEBhFDtFAq3j3gXiBgFeIGNFeAdoxjxjAgdrtaSAyuDdjJRAImNmivGJgJjAaOTKPEeI06SlncKPEi/ugLFnSc5xLhz1NFW3idJm8V7dKLiil7fqb6Ccxju0eJqHvVCB+1dAIG1X4Nh6WuIxAv+xO83lf/EoVeM4SkLUMMrH99XvH/wCpJnPZ73vqTrc3lZt7wN+r2pxD6Zgo/agyr8NZW/6xVP68v9o195mTeFeBrf8AUT1JPUm5gPiidplmSq0DYwfF6tJg6OVI1tyPgRPXuz3FPzFJXtY7MOhH38Z4lT5Geo/8eIwoMx2Z2I8gAPpA7NTDUyFTJlMAgxiiigUyY0RigGDHEjjkwDvEWmVxDjVKkO+6jzOvunMY/t5TW+QFjfS+g84HYUjqfOSNUA1JA8zaeUY/t1XJtnCDmFGvv3mJiOOs5JJqMd9SeX0geyYnjmHT2qqehufcJi43txQTRAznlYWHvM8prcS/otz1N72ljBYp3NgUTppb5wOs4n2zxL3CAIPDVveZyOOxLM13cseZY3+c207MVXF2qXv98pFiOx1Rba39IHPF16wTVF9jNp+zNUHUeZ3i/wC32Gp0HPp6wMW7b5fvnBYHy8JoYmkiEjNew899pVesh0vqfKw5/fnAro3U/fKOwMCvSG4MVKobWgOX1AkyNcyM09RL3DcC9R1RFJYnYfPygXuGYF6roiDViB6cyegAnsvC8GtKmlNdlAH8kzK7M8ATDJc2Lkd5un9K+E6JVgOsmWRrDECS8UGKBUijRiYAYiuqKWYgADUnoJwXHu1jvdaPcXbMfaPiOkm7f8TK5ad9NWI68gPLeefVMUW5+kAsfimY3LEnqTf4zPL9bx6zfe0hBJ0B9Ovh4mALEsbk/wC+U7DhPAP/ABXNyxF/K+3nOUoUruo6kWHW5nuPDMGoRRYbCBx2B7BBznqva+uVRt4a7y3iuwlHKcjsDbcgW9bWvOxxWIVELMbAbk3+gvOd4lxmo1F3o0iUS4LuGzG3OnRXvMt+ZK6a62gch/2piVey1xYEEMGceuXr4Tv+B8PqIgWo5duZJ5eE814bi8W7q+bc+yWAuBa5CtsNd/Az1vh+bIube2vhAq46mqi5AnnHazFuzZEewG4BI989C7SMQht0nj2MrFnuWsCT/j0gT8L4LUqE2Kgc7k/C01R2LOW/4wv0y6e+8z8NxQ0bIEdmPMOBfbLlUoQfedpqDj9RHKOhBGhVxlcHfcaHTygYGJ4a9I5H57ETOW4Nj5e//XwnoNUfjKrBT5H1BvecZxeiErMB4H3wGwmFeo6IgzOxsqi2p33OnrPSuyvZB6TrWqVLMNkTx5O3MeAnMf8AHdEvi1NrhEdielwFHxM9gRYBIJMFggQ1EBAQhGEcQCiiDR4FGIxXigec/wDJeDa6VQO7qhPQ3uv1nn4ee88SwKVUZHF1YWM8m7Q9ka9FiUU1E5MoJIHRlHzgc1VeXOz+Fz1gvn/MplNbEWPTa3mDN7sjTH5lAdM2ZR5ldPlA61uxdNnSqhyEEErupsQSfDadvTSwmTjcQyGmiAZmZQb8l/Vb0mykBssjeneWLRssDKXhNMNmCC53NppIltJIFitAyuO081MieX4rg7M2gv0989bx9PMhHUTkMgViCNjAy8D2ZRgCS1x0P+JebslRtex95JPqZqYZuk0kaBjYbChBltOT45wR3xIKDRgLnp1ne4mnrec9xLHKldFbmNDc6EnpAH/jtMmJrJlGlO17aizAWv4/Sel05xPYPCXevXN+85RfIG7H5e6dwogHFFEpgIR7xiYJgSgxoCmKBXijGPAREB0BhmPaBnYnhFJ/bpo/9yg/OVU7MYZWDrRVWBDAi4sRqDoZt2itAx6+DP4yVRYgKVYHcX2YfEes0UhMusYQCEaFGYwGvKNLiRNVqRpOoHsuV7jaXIBG3rLFXEKguzBR1JAEyj2gpEtYkhd20y6b211gLtFx1MOmZjqdlG5nKcN4wuJzEKVI3v05SHtbiUe1VLOrad7UAi/WZPZviSI5XYnr1+UDtcKtpfpNpM/DODsZbR7QDxNTScTxKi1fFIEUnKQCRtob2+k66u9xI+z2EzVi36V79rDVzoDfnz+EDp+F4NaVNUUbDXxY6sffNBZEskBgEIiYrwXMBFo14JMV4BCNEI0COOYwjwEIQjWjiAQERjQjAAreRZLHe/nJo1TrAitIq9IMpBuPEGxHiDJTAeBgVOGo7kPVL2Ps3Fxcc/H3SccJw5QpkXIRsL/MS/RwNNSWCLmO7W7x8yZKyLtYW9IHHcco0EpLh1S662YnVb6kg89557icGUbuknX19Os9b4nwLD1FIZNbWuGYEe4zj8X2cRWCo7EDqbiBl9nsRiAbEMFt+oHTyvOuSuT5wEpKqgdBIlqC8C+iF3FMNlLX1te1gTe03+D8NNIEs4ZjYXAyjTwvMnsymeo78lGUeban4W986kQChXgRi0A7xgYIMMQGjgRwI5EBgI0cCPAhiMUaA4hLAMcGAcUa8cGAoiIoUCrmtFHdbyJCQbH0gGwlTEUM295dJgMwgYeKwZA0Y2lEUiOXrN/EOJj4zFKBAz8W4UazFbGXNgZDxPiBZioMqIusDvexPsP/AHA/C30nUAzieyOORMyswW9rZja++152aODqIEhMERXjiAUNRGUSRVgNaPaPaOsBCKKKBUvFaAIcBRAxRQHEV40UAw0xe1HEjRoOymzHuqf6jz9NT6TWZtJg9rMGamGcKLstnGv7T3t/C8C9waqWoUmJuTTUkncmwveW2Ez+zrA4al/YB6jQzSgRPmmRj8aybqQPvnN0iUsbhg6lTA5DG9oVUEA6zm8TxFnJsd5p8bwQDkAbdBMZqRB3+/GAqK3MuKsDD0tLyYCBncYchQQfsy72Y7TVKVZFZiabEKyk3AB/UOhEp8bPdAkXZzCh3Gm2p2I6fflA9tVr6yRZncHqXTLzXT05fx6TSUQJAYawFWSqIDQRJCIMBhFGigVVEcxRGAo1o4igMRHijE2gNUkboCCDsdCPCPePA5fglf8AArvhH2vnpkndG1t9+M6gGc52s4czKtenf8SnqAN2XcjxI3980uDcSWtTVx6jmDzEDSYyvUaT3kTQOX4jg7lieesxk4dmbadtiEB5SsmEtr/uBzFfBZR96yglLUzZ4tUsTaU8FQuM2vzgc1xZWLhbc/PnOl4Vwo0EAPtNqfDoIXAuGfi4lnPsUyNP3OdVHpofdOrxOFBECpgcQUIYeR8Z0WGrq6hlOh+HUTnEoESrwTiZpYl6THuM1x/Sd7jwIgdwgh5pGnhDgETBiivAYRRRQKwiIj3gkwEI8BmA3gPVNtNIEpaRM95EGhwCECpUCgsSAACSTsANSTHJnIduuMqlI0FPfqAAgfpS9zfzta0DMxnbh2rAUlXIGt3t313J/T6TtFp06YzqqqXYXI5s56eZnm/ZXgIxJYs5XKQRYA3PrPTsNTcAK9jb9Q5+nKAYrWXMdB1Onr5RV3GXMJIydbGZxp/hkofYf2Cf0tvk8uY8iIEtDva/OT1hZSZV4adx0NpZx7WRvL5wOLx75nt4zbwGGultgNz0/mVuG8GZ2zvovTm3ryEPtXxZcPTyJbO2gA5Da5gT4ziWGwaBS2p1yqLsx5s1vnORxXbGs1TOhyoNAlgRb+rqfLaYK4epUZmJLHqSfvpGfh7j9PL3wPRMNxJaqK40zbgHQEb28JhLUb8zm6i30lPs8zLTdVuSjo+X+k3DgX5bGbZwuasjAc9dOW8DscFiiqi4JA36jyHOaVGuri6sCPD70mbRWwlDG4dlb8VCV65Tbn8QekDpgYiJiYTjgJCupFxo6i6+NxuvymyjAi4Nx4QCAij3igZ5eC1WRM94BMAybxEyINDEAozvYEk2A1JOw85n8U4vToC7m7H2UXV2Pgv1mbh8PWxLB6/cpXutEbnoXP0galeu9RT+EQt9nYE38VXp4mUU7K4ci7qXcm7OzNmY8+e3hNtQBoI6mAGDwaIuVEVB0UWlkSG8MNAlJlfE01dCp2OxG4O4I8QbSS8AjmIGdgQyuQ2+zef7h4GaFYi3etYb3lbFCxD3C5dydivMH5j/ADOE7QdpGrMadMEIOfXXe0DY472wRLpR7xGhf9K3vawnIYKnUxNS7MXZtSekbDcDd6oVhqBdr8swuLnrtO84PwxaagAbc/pADh3BERbS3V4ShG00QI4gYi8GRDnTut7wwO6sOYmnhirZQRlYa5dL2G9j+pdRrJjKTUA75mGo9k818QRsYGwDCyjUbgzmjisVTNyBVS9hm7rjp3hv6ibeGxYYC4ZCR7LW+exgZuIwhRxb2G2PTqD4y9hsS5bKrWVfKHjXGUi48POZfBaxJcHe9zA6RMURvrFIaQuNIoEEBmhEyFngFnkGJxRv+HTsXIvc6qg2zN18BzhgxU0Vb2AF9Sep6mBXwnDUQl277n2nexY+A/aPAS+rSJWhAwCZolaRsYytAsBo+aQhoiYE5eMagkBeRu51PQGBz3aTjJNRaSAsFN3ymxLDa3W3TwhcF4L33rOoVqjZsundG/LS5k+B4cucO2rHUnz1m70gUMFQGeoSBf8AE+GVbTRAlOhYVKvmh/8AwB9JZzQCJjAxi0V4DmRNJLwXgEgzC0nqoCLEXFpXpkDW8ld9LwMDGCujdz/yKTop9tfAHmJp8LwrIjM4szd4rvl8Lj1lijTu1zy+ckr1d/CBYwTd2/WKDw2+QX3jQIHMheQNjV6H79Yvzi9D8P5gSXhBpVOKXx+/WD+bXofv1gWg8NTKSYpfH79Y74pfH79YFovFnlX8wPH4RhiR4/frAuZo15U/OL0P36xfnB4/frAtO8F37rW6Sqa9+sdsQMp3+EC1TXLbyk2bUCZ64oZuf36yQYtb8/v1gNScGrUF/wBh96/4Mt5ph0sTbFVTrYonnpeaD4pd7H79YFtz8o6mUzjBbY/frHOMXofv1gW2qAbyS1xMuviRe+t/vxlmnjh0P36wDII8pOji1pA+JQjY+4fzIExQB5+4fzA1FNllF3uzCO2OXofcP5kNDFLmOh36D+YGxh+6oEUgTGpbZvcP5igf/9k=" alt="Bhagat Singh">
+            <div class="caption">Revolutionary socialist and freedom fighter.</div>
+        </div>
+
+        <div class="tribute-data">
+            <h2 class="section-title">About the Legend</h2>
+            <p>
+                Bhagat Singh, born on September 28, 1907, in Banga, Punjab, British India, was a revolutionary socialist
+                and freedom fighter who played a significant role in the Indian independence movement.<br><br>
+                Inspired by the Jallianwala Bagh massacre and the non-cooperation movement led by Mahatma Gandhi, Bhagat
+                Singh joined the struggle for independence at a young age. He became involved in revolutionary activities
+                against British rule and was a prominent member of the Hindustan Socialist Republican Association (HSRA).<br><br>
+                Bhagat Singh is remembered for his acts of defiance against British colonialism, including the Lahore
+                Conspiracy Case and the assembly bombing incident. His commitment to the cause of freedom and his fearlessness
+                in the face of oppression made him a symbol of resistance and patriotism.<br><br>
+                On March 23, 1931, Bhagat Singh was executed by the British colonial government at the age of 23, along
+                with Rajguru and Sukhdev, for his involvement in the killing of British police officer John Saunders.<br><br>
+                Bhagat Singh's legacy continues to inspire generations of Indians to fight against injustice and tyranny,
+                and he remains a revered figure in the history of India's struggle for independence.
+            </p>
+        </div>
+
+        <a class="tribute-link" href="https://en.wikipedia.org/wiki/Bhagat_Singh">For more information, check out Bhagat Singh on Wikipedia</a>
+
+    </div>
+</body>
+
+</html>
